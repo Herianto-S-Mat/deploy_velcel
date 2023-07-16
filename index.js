@@ -22,3 +22,4 @@ server.route([
 
 server.start();
     console.log(`Server berjalan pada ${server.info.uri}`);
+module.exports =server;
