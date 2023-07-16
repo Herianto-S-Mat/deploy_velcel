@@ -5,8 +5,14 @@ const server = hapi.server({
     host: 'localhost',
 });
 
-
-server.route([
+const routes = [
+    {
+        method: 'GET',
+        path: '/',
+        handler: () => {
+            return 'halaman pertama';
+        },
+        },
     {
     method: 'GET',
     path: '/a',
@@ -14,8 +20,9 @@ server.route([
         return 'kosong sayang';
     },
     }
-]);
+]
+
+server.route(routes);
 
 server.start();
     console.log(`Server berjalan pada ${server.info.uri}`);
-module.exports =server;
