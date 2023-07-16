@@ -9,7 +9,7 @@ const server = hapi.server({
 server.route([
     {
     method: 'GET',
-    path: '/',
+    path: '/a',
     handler: () => {
         return 'kosong sayang';
     },
